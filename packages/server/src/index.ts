@@ -13,7 +13,7 @@ const io = new ServerIO(server, {
 });
 
 useSocketServer(io, {
-  controllers: [__dirname + '/src/controllers/*.ts'],
+  controllers: [__dirname + '/controllers/*.ts'],
 });
 
 process.on('uncaughtException', (error) => {
@@ -23,8 +23,10 @@ process.on('uncaughtException', (error) => {
 
 process.on('SIGTERM', () => {
   console.info('SIGTERM signal received');
+  process.exit(1)
 });
 
 server.listen(8080, () => {
   console.log('App is listening on port 8080!');
 });
+server.on('error', (e) => console.log('got error from server', e))

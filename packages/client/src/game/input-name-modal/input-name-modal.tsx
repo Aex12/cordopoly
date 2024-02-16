@@ -62,13 +62,13 @@ export const InputNameModal = () => {
     <Wrapper>
       <Modal>
         <form onSubmit={handleSubmit}>
-          <Title>Введите свое имя</Title>
+          <Title>Introduzca su nombre</Title>
 
           <Input value={playerName} onChange={handleChangeName} />
           <br />
 
           <Button type="submit" disabled={!playerName}>
-            Готово
+            Listo
           </Button>
         </form>
       </Modal>

@@ -7,9 +7,9 @@ import { getSearchParam } from '../lib/search-param';
 import { gameSettingStore } from '../create-game/game-setting-store';
 import { gameStore } from '../core/game-store';
 
-const isDev = process.env.NODE_ENV === 'development';
+const ioRoute = 'http://localhost:8080'
 
-export const events = io(isDev ? 'http://localhost:8080' : '/', {
+export const events = io(ioRoute, {
   path: '/ws',
   transports: ['websocket'],
   upgrade: false,

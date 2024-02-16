@@ -79,10 +79,10 @@ export const CreateGame = observer(() => {
   return (
     <Wrapper>
       <Form>
-        <Title>Создайте свою игру</Title>
+        <Title>Crea tu propio juego</Title>
 
         <div>
-          <Paragraph>Выберите количество игроков</Paragraph>
+          <Paragraph>Seleccione el número de jugadores</Paragraph>
 
           <div>
             {[2, 3, 4].map((value) => (
@@ -103,7 +103,7 @@ export const CreateGame = observer(() => {
           disabled={!countPlayers}
           onClick={handleSubmitCreateGame}
         >
-          Создать
+          Crear sala
         </Button>
       </Form>
     </Wrapper>
