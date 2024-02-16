@@ -48,7 +48,7 @@ const renderBuyCompany = () => {
   if (priceData) {
     return (
       <ActionButton onClick={playerEvents.buyCompany}>
-        Купить за {priceData.cost} $
+        Comprar por {priceData.cost} $
       </ActionButton>
     );
   }
@@ -61,7 +61,7 @@ const renderPayRent = () => {
   if (priceData && priceData.type === 'Company') {
     return (
       <ActionButton onClick={playerEvents.payRent}>
-        Оплатить {priceData.rent0} $
+        Pagar alquiler {priceData.rent0} $
       </ActionButton>
     );
   }
@@ -86,7 +86,7 @@ export const ActionsPopup = observer(() => {
             playerEvents.roleDice();
           }}
         >
-          Бросить кубики
+          Tirar los dados
         </ActionButton>
       )}
 

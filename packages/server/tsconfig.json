@@ -12,7 +12,10 @@
     "strict": true,
     "types": [
       "jest"
-    ]
+    ],
+    "paths": {
+      "@cordopoly/shared": ["../shared/src"]
+    }
   },
   "exclude": [
     "node_modules", "dist", "jest.config.ts"
